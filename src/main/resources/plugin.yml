@@ -1,0 +1,13 @@
+name: MsgServer
+version: '${project.version}'
+main: io.gitee.tigercrl.msgserver.MsgServer
+api-version: 1.16
+authors: [ Tigercrl ]
+description: Allows you to /tell the server!
+website: https://github.com/Tigercrl/MsgServer
+load: POSTWORLD
+commands:
+  tellserver:
+    description: /tell the server
+    usage: /tellserver <message>
+    aliases: [ msgserver,wserver ]
