@@ -15,16 +15,16 @@ public class TellServerCommand implements CommandExecutor {
                     StringBuilder message = new StringBuilder();
                     for (String i : args) {
                         message.append(i);
-                        if (!i.equals(args[args.length])) {
+                        if (!i.equals(args[args.length - 1])) {
                             message.append(" ");
                         }
                     }
                     String player = sender.getName();
-                    sender.sendMessage(ChatColor.GREEN + "[MsgServer] " + ChatColor.GRAY + "You whisper to the Server: " + message + ChatColor.RESET);
-                    System.out.println(ChatColor.GREEN + "[MsgServer] " + ChatColor.GRAY + player + "whispers to you: " + message + ChatColor.RESET);
+                    sender.sendMessage(ChatColor.GRAY + "You whisper to the Server: " + message);
+                    System.out.println("[MsgServer] " + player + "whispers to you: " + message);
                 }
             } else {
-                System.out.println(ChatColor.GREEN + "[MsgServer] " + ChatColor.RED + "You should be a player to use this command!" + ChatColor.RESET);
+                System.out.println("[MsgServer] You should be a player to use this command!");
             }
             return true;
         }
